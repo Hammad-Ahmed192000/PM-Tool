@@ -20,6 +20,18 @@ document.querySelectorAll(".sidebar-option-main").forEach((e) => {
       }
     });
     e.nextElementSibling.classList.toggle("sidebar-option-dropdown-active");
+    document.querySelectorAll(".sidebar-option-dropdown").forEach((event) => {
+      if (event.classList.contains("sidebar-option-dropdown-active")) {
+        console.log(event.parentElement.querySelector(".sidebar-caret-icon"));
+        event.parentElement.querySelector(
+          ".sidebar-caret-icon"
+        ).style.transform = "rotate(180deg)";
+      } else {
+        event.parentElement.querySelector(
+          ".sidebar-caret-icon"
+        ).style.transform = "rotate(0deg)";
+      }
+    });
   });
 });
 
