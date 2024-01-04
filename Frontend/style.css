@@ -89,7 +89,8 @@ body {
     overflow-y: hidden;
 }
 
-.sidebar ul li:first-child div {
+.sidebar ul li:first-child div,
+.single-sidebar-option div {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -204,7 +205,7 @@ header {
 .header-search-row input {
     width: 100%;
     border-radius: 8px;
-    padding: 14px 16px 14px 48px;
+    padding: 13px 16px 13px 48px;
     color: rgba(172, 172, 176, 0.8);
     font-size: 14px;
     font-weight: 400;
@@ -710,7 +711,7 @@ table tr td {
 }
 
 .add-task-bottom-btns button {
-    padding: 17px 44px;
+    padding: 13px 32px;
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
@@ -1154,6 +1155,45 @@ table tr td {
     line-height: 20px;
 }
 
+.right-side-content-inner-filter-dropdown {
+    position: relative;
+}
+
+.right-side-content-inner-filter-dropdown .right-side-content-inner-filter-dropdown-icon-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+}
+
+.right-side-content-inner-filter-dropdown-inner {
+    border-radius: 8px;
+}
+
+.right-side-content-inner-filter-dropdown-inner-heading {
+    background-color: #000;
+    padding: 13px 18px;
+}
+
+.right-side-content-inner-filter-dropdown-inner-inner p {
+    color: #181F26;
+}
+
+.right-side-content-inner-filter-dropdown-inner-inner div {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side-content-inner-filter-dropdown-inner-inner div label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-side-content-inner-filter-dropdown-inner-inner div label input {
+    width: auto;
+}
+
 .project-activity-card td {
     border: none;
     position: relative;
@@ -1360,6 +1400,14 @@ select {
 /* Media Queries  */
 
 @media(max-width:1650px) {
+    .header-search-row {
+        width: 50%;
+    }
+
+    .right-side-content-inner-search {
+        width: 44%;
+    }
+
     .project-list-inner-container {
         flex-wrap: wrap;
     }

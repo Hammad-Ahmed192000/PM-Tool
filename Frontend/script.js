@@ -120,3 +120,10 @@ if (document.querySelector(".project-list-card-option-row")) {
       });
     });
 }
+
+// Page End Back Btn
+if (document.querySelector(".page-end-back-btn")) {
+  document.querySelector(".page-end-back-btn").addEventListener("click", () => {
+    window.history.back();
+  });
+}
