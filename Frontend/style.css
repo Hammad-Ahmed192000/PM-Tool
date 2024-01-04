@@ -12,6 +12,17 @@ body {
     background-color: rgba(246, 246, 249, 0.75);
 }
 
+.back-transparent-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.49);
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    display: none;
+}
+
 .content {
     display: flex;
     width: 100%;
@@ -60,13 +71,14 @@ body {
 
 .sidebar ul {
     margin-top: 36px;
-
 }
 
 .sidebar ul li {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: column;
+    /* justify-content: space-between; */
+    list-style-type: none;
     color: #8F9095;
     font-size: 14px;
     font-weight: 600;
@@ -74,12 +86,58 @@ body {
     margin-bottom: 16px;
     padding: 11px;
     border-radius: 8px;
+    overflow-y: hidden;
 }
 
-.sidebar ul li div {
+.sidebar ul li:first-child div {
     display: flex;
     align-items: center;
     gap: 12px;
+
+}
+
+.sidebar-option-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.sidebar-option-back-shadow {
+    position: absolute;
+    left: -12px;
+    top: -12px;
+}
+
+.sidebar-active-page {
+    background: rgba(60, 67, 75, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.sidebar-option-main div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-option-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 30px 5px 10px 34px;
+    display: none;
+}
+
+.sidebar-option-dropdown-active {
+    display: flex;
+}
+
+.sidebar-option-dropdown a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #979797;
 }
 
 .sidebar-user-info {
@@ -219,6 +277,19 @@ header {
     align-items: center;
     border-radius: 8px;
     padding: 13px 16px 13px 12px;
+}
+
+.page-name-heading .page-name-heading-btns a {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-radius: 8px;
+    /* padding: 13px 16px 13px 12px; */
+    padding: 7px 10px 7px 8px;
+    text-decoration: none;
 }
 
 .page-name-heading-transparent-box {
@@ -465,8 +536,9 @@ table tr td {
     right: 0;
     width: 324px;
     background-color: #fff;
-    border-radius: 0 0 8px 8px;
+    border-radius: 8px;
     display: none;
+    z-index: 20;
 }
 
 .right-side-content-inner-filter-hamburg-inner-heading {
@@ -650,6 +722,10 @@ table tr td {
     background-color: #fff;
 }
 
+.check-assign-project-fields-row {
+    display: none;
+}
+
 /* Project List CSS  */
 
 .project-list-inner-container {
@@ -662,6 +738,7 @@ table tr td {
     width: 31%;
     background-color: #fff;
     border-radius: 8px;
+    align-self: start;
 }
 
 .project-list-doing {
@@ -840,6 +917,7 @@ table tr td {
     margin-top: 24px;
     border-top: 1px solid rgba(24, 31, 38, 0.24);
     padding: 24px 0;
+    display: none;
 }
 
 .project-list-card-detail-expand-heading {
@@ -938,6 +1016,10 @@ table tr td {
     box-shadow: 0px 0.778px 1.181px 0px rgba(61, 203, 177, 0.02), 0px 3px 2.444px 0px rgba(61, 203, 177, 0.03), 0px 8px 4.875px 0px rgba(61, 203, 177, 0.04), 0px 12px 9.556px 0px rgba(61, 203, 177, 0.04), 0px 12px 11.25px 0px rgba(61, 203, 177, 0.05);
 }
 
+.no-shadow {
+    box-shadow: none;
+}
+
 .add-project-add-role-plus-btn-row {
     display: flex;
     justify-content: flex-end;
@@ -995,6 +1077,7 @@ table tr td {
 .activity-task-inner {
     background-color: rgba(8, 93, 183, 0.06);
     margin-top: 72px;
+    display: none;
 }
 
 .activity-task-inner textarea,
@@ -1263,7 +1346,16 @@ select {
     flex-direction: row;
 }
 
+/* PlaceHolder Color  */
+::placeholder {
+    color: #BABABAed;
+    /* Firefox */
+}
 
+::-ms-input-placeholder {
+    /* Edge 12-18 */
+    color: #BABABA;
+}
 
 /* Media Queries  */
 
