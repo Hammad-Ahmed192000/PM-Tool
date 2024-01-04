@@ -15,7 +15,9 @@ if (document.querySelector(".hamburg-lines")) {
 document.querySelectorAll(".sidebar-option-main").forEach((e) => {
   e.addEventListener("click", () => {
     document.querySelectorAll(".sidebar-option-dropdown").forEach((event) => {
-      event.classList.remove("sidebar-option-dropdown-active");
+      if (event != e.nextElementSibling) {
+        event.classList.remove("sidebar-option-dropdown-active");
+      }
     });
     e.nextElementSibling.classList.toggle("sidebar-option-dropdown-active");
   });
@@ -145,6 +147,12 @@ if (document.querySelector(".project-list-card-option-row")) {
     });
 }
 
+// Page Top Back Btn
+if (document.querySelector(".page-top-back-btn")) {
+  document.querySelector(".page-top-back-btn").addEventListener("click", () => {
+    window.history.back();
+  });
+}
 // Page End Back Btn
 if (document.querySelector(".page-end-back-btn")) {
   document.querySelector(".page-end-back-btn").addEventListener("click", () => {
