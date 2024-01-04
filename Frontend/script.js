@@ -21,6 +21,30 @@ document.querySelectorAll(".sidebar-option-main").forEach((e) => {
   });
 });
 
+// Other Filters
+if (document.querySelector(".right-side-content-inner-filter-dropdown")) {
+  document
+    .querySelectorAll(".right-side-content-inner-filter-dropdown-clickable")
+    .forEach((e) => {
+      e.addEventListener("click", () => {
+        e.parentElement.querySelector(
+          ".right-side-content-inner-filter-dropdown-inner"
+        ).style.display = "block";
+        document.querySelector(".back-transparent-layer").style.display =
+          "block";
+      });
+    });
+  document
+    .querySelectorAll(".right-side-content-inner-filter-dropdown-inner-heading")
+    .forEach((event) => {
+      event.addEventListener("click", () => {
+        event.parentElement.style.display = "none";
+        document.querySelector(".back-transparent-layer").style.display =
+          "none";
+      });
+    });
+}
+
 // Hamburg Filter
 if (document.querySelector(".right-side-content-inner-filter-hamburg")) {
   document
