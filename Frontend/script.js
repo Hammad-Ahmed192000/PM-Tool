@@ -35,6 +35,43 @@ document.querySelectorAll(".sidebar-option-main").forEach((e) => {
   });
 });
 
+// Comment Modal
+if (document.querySelector(".comment-modal")) {
+  console.log(document.querySelector(".comment-modal"));
+  document.querySelectorAll(".document-table-comment").forEach((e) => {
+    e.addEventListener("click", () => {
+      console.log("s");
+      document.querySelector(".comment-modal").style.display = "block";
+      document.querySelector(".back-transparent-layer").style.display = "block";
+    });
+  });
+  document
+    .querySelector(".comment-modal-ok-btn")
+    .addEventListener("click", () => {
+      document.querySelector(".comment-modal").style.display = "none";
+      document.querySelector(".back-transparent-layer").style.display = "none";
+    });
+}
+
+// Forwad Doc Modal
+if (document.querySelector(".forwad-doc-modal")) {
+  document.querySelectorAll(".forwad-doc-btn").forEach((e) => {
+    e.addEventListener("click", () => {
+      document.querySelector(".forwad-doc-modal").style.display = "block";
+      document.querySelector(".back-transparent-layer").style.display = "block";
+    });
+  });
+  document
+    .querySelectorAll(".forwad-doc-modal-btns-row button")
+    .forEach((e) => {
+      e.addEventListener("click", () => {
+        document.querySelector(".forwad-doc-modal").style.display = "none";
+        document.querySelector(".back-transparent-layer").style.display =
+          "none";
+      });
+    });
+}
+
 // Other Filters
 if (document.querySelector(".right-side-content-inner-filter-dropdown")) {
   document
@@ -169,5 +206,20 @@ if (document.querySelector(".page-top-back-btn")) {
 if (document.querySelector(".page-end-back-btn")) {
   document.querySelector(".page-end-back-btn").addEventListener("click", () => {
     window.history.back();
+  });
+}
+
+// Project Page DropDowns
+
+if (document.querySelector(".project-table")) {
+  document.querySelectorAll(".project-page-tr-dropdown").forEach((e) => {
+    e.addEventListener("click", (event) => {
+      event.target.parentElement.classList.toggle(
+        "project-page-tr-dropdown-active"
+      );
+      event.target.parentElement.nextElementSibling.classList.toggle(
+        "project-activity-card-active"
+      );
+    });
   });
 }
