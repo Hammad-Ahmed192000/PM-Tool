@@ -221,6 +221,7 @@ header {
     display: flex;
     align-items: center;
     gap: 16px;
+    position: relative;
 }
 
 .header-user-box div {
@@ -243,6 +244,42 @@ header {
     font-weight: 400;
     line-height: 20px;
     color: rgba(172, 172, 176, 0.8);
+}
+
+.header-user-box-profile-info {
+    position: absolute;
+    top: 63px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    /* box-shadow: 0px 4px 24px 0px rgba(24, 31, 38, 0.12); */
+    padding: 20px 40px;
+    width: 100%;
+    border: 1px solid #D8D8D8;
+    border-top: none;
+    display: none;
+    z-index: 15;
+}
+
+.header-user-box-profile-info-active {
+    display: block;
+}
+
+.header-user-box-profile-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header-user-box-profile-info ul li {
+    list-style-type: none;
+}
+
+.header-user-box-profile-info ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(24, 31, 38, 0.8);
+    line-height: 20px;
 }
 
 .hamburg-lines {
@@ -1324,6 +1361,36 @@ input[type="checkbox"]:checked {
     color: #181F26;
 }
 
+.document-status-box p {
+    border-radius: 6px;
+    padding: 4px 12px;
+}
+
+.document-status-underwork {
+    color: #085DB7;
+    background-color: rgba(177, 212, 250, 0.6);
+    width: 101px;
+}
+
+.document-status-approval {
+    color: #00AD90;
+    background-color: rgba(239, 251, 249, 1);
+    width: 103px;
+
+}
+
+.document-status-accepted {
+    color: #42AA2F;
+    background-color: rgba(213, 253, 205, 0.6);
+    width: 90px;
+}
+
+.document-status-rejected {
+    color: #F1595C;
+    background-color: rgba(241, 89, 92, 0.2);
+    width: 85px;
+}
+
 /* Comment Modal  */
 
 .comment-modal {
@@ -1529,6 +1596,10 @@ input[type="checkbox"]:checked {
     border-radius: 6px;
 }
 
+.project-activity-card-inner td {
+    text-wrap: wrap;
+}
+
 .project-activity-card-heading {
     font-size: 20px;
     font-weight: 700;
@@ -1549,6 +1620,15 @@ input[type="checkbox"]:checked {
     border-right: 1px solid rgba(16, 36, 55, 0.24);
 }
 
+.project-activity-task-card-inner {
+    margin-top: 20px;
+}
+
+.project-activity-task-card-inner table th {
+    background-color: #FFEDD1;
+}
+
+
 .project-activity-card-inner table th:last-child {
     border-right: none;
 }
@@ -1567,6 +1647,28 @@ input[type="checkbox"]:checked {
 
 .project-activity-card-inner table td:last-child {
     border-right: none;
+}
+
+.project-activity-task-card-inner-btn-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.project-activity-task-card-inner-btn-row button {
+    color: #fff;
+    background-color: #085DB7;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 8px 16px 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
 }
 
 /* Drawing Page  */
