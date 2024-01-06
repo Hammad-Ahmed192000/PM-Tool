@@ -22,7 +22,6 @@ document.querySelectorAll(".sidebar-option-main").forEach((e) => {
     e.nextElementSibling.classList.toggle("sidebar-option-dropdown-active");
     document.querySelectorAll(".sidebar-option-dropdown").forEach((event) => {
       if (event.classList.contains("sidebar-option-dropdown-active")) {
-        console.log(event.parentElement.querySelector(".sidebar-caret-icon"));
         event.parentElement.querySelector(
           ".sidebar-caret-icon"
         ).style.transform = "rotate(180deg)";
@@ -37,10 +36,8 @@ document.querySelectorAll(".sidebar-option-main").forEach((e) => {
 
 // Comment Modal
 if (document.querySelector(".comment-modal")) {
-  console.log(document.querySelector(".comment-modal"));
   document.querySelectorAll(".document-table-comment").forEach((e) => {
     e.addEventListener("click", () => {
-      console.log("s");
       document.querySelector(".comment-modal").style.display = "block";
       document.querySelector(".back-transparent-layer").style.display = "block";
     });
@@ -66,6 +63,26 @@ if (document.querySelector(".forwad-doc-modal")) {
     .forEach((e) => {
       e.addEventListener("click", () => {
         document.querySelector(".forwad-doc-modal").style.display = "none";
+        document.querySelector(".back-transparent-layer").style.display =
+          "none";
+      });
+    });
+}
+
+// Create New Folder Modal
+if (document.querySelector(".new-folder-modal")) {
+  document
+    .querySelector(".create-new-folder-btn")
+    .addEventListener("click", () => {
+      document.querySelector(".new-folder-modal").style.display = "block";
+      document.querySelector(".back-transparent-layer").style.display = "block";
+    });
+
+  document
+    .querySelectorAll(".new-folder-modal-btns-row button")
+    .forEach((e) => {
+      e.addEventListener("click", () => {
+        document.querySelector(".new-folder-modal").style.display = "none";
         document.querySelector(".back-transparent-layer").style.display =
           "none";
       });
@@ -147,12 +164,10 @@ if (document.getElementById("check-assign-project")) {
     .getElementById("check-assign-project")
     .addEventListener("input", (e) => {
       if (e.target.checked) {
-        console.log("cheecked");
         document.querySelector(
           ".check-assign-project-fields-row"
         ).style.display = "flex";
       } else {
-        console.log("unchecked");
         document.querySelector(
           ".check-assign-project-fields-row"
         ).style.display = "none";
@@ -214,12 +229,20 @@ if (document.querySelector(".page-end-back-btn")) {
 if (document.querySelector(".project-table")) {
   document.querySelectorAll(".project-page-tr-dropdown").forEach((e) => {
     e.addEventListener("click", (event) => {
-      event.target.parentElement.classList.toggle(
-        "project-page-tr-dropdown-active"
-      );
-      event.target.parentElement.nextElementSibling.classList.toggle(
-        "project-activity-card-active"
-      );
+      if (
+        event.target.parentElement.classList.contains(
+          "project-page-tr-dropdown"
+        )
+      ) {
+        event.target.parentElement.classList.toggle(
+          "project-page-tr-dropdown-active"
+        );
+        event.target.parentElement.nextElementSibling.classList.toggle(
+          "project-activity-card-active"
+        );
+      } else {
+        return;
+      }
     });
   });
 }
