@@ -188,7 +188,8 @@ header {
     width: 100%;
     background-color: #fff;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -321,7 +322,7 @@ header {
 
 .right-side-content-inner-search {
     position: relative;
-    width: 35%;
+    width: 50%;
 }
 
 .right-side-content-inner-search svg {
@@ -441,6 +442,7 @@ table tr td {
     display: inline;
     color: #0EA5E8;
     border-bottom: 1px solid #0EA5E8;
+    cursor: pointer;
 }
 
 .table-action-box {
@@ -541,6 +543,20 @@ table tr td {
     position: relative;
 }
 
+.right-side-content-inner-filter-hamburg-line {
+    border: 1px solid #D9DBDE;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.right-side-content-inner-filter-hamburg-line rect {
+    fill: #fff;
+}
+
+.right-side-content-inner-filter-hamburg-line:hover rect {
+    fill: #D9DBDE;
+}
+
 .right-side-content-inner-filter-hamburg-inner {
     position: absolute;
     top: 0;
@@ -571,7 +587,7 @@ table tr td {
 }
 
 .right-side-content-inner-filter-hamburg-inner-inner {
-    padding: 31px 27px 20px 27px;
+    padding: 13px 27px 20px 27px;
 }
 
 .right-side-content-inner-filter-hamburg-inner-subheading {
@@ -585,7 +601,7 @@ table tr td {
 }
 
 .right-side-content-inner-filter-hamburg-inner-inner-filters {
-    margin: 24px 0 30px 0;
+    margin: 12px 0 30px 0;
 }
 
 .right-side-content-inner-filter-hamburg-inner-inner-filters div {
@@ -694,7 +710,6 @@ table tr td {
     display: flex;
     gap: 10px;
     margin-top: 30px;
-    font-family: Inter;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -708,8 +723,12 @@ table tr td {
     height: 18px;
 }
 
-.add-task-input-check-row input:checked {
-    outline: 1px solid red;
+input[type="checkbox"] {
+    accent-color: white;
+}
+
+input[type="checkbox"]:checked {
+    outline: 1px solid #F1595C;
     border-radius: 4px;
 }
 
@@ -717,11 +736,11 @@ table tr td {
     display: flex;
     gap: 16px;
     justify-content: flex-end;
-    margin-top: 101px;
+    margin-top: 81px;
 }
 
 .add-task-bottom-btns button {
-    padding: 13px 32px;
+    padding: 7px 28px;
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
@@ -761,6 +780,7 @@ table tr td {
     /* margin: 0 60px 30px 60px; */
     display: flex;
     gap: 41px;
+    margin-bottom: 24px;
 }
 
 .project-list-card-full {
@@ -1205,8 +1225,8 @@ table tr td {
     top: 0;
     left: 0;
     border-radius: 8px;
-    /* width: 246px;  */
-    width: 100%;
+    width: 246px;
+    /* width: 100%; */
     background-color: #fff;
     z-index: 15;
     display: none;
@@ -1799,9 +1819,10 @@ select {
         width: 50%;
     }
 
+    /* 
     .right-side-content-inner-search {
-        width: 44%;
-    }
+        width: 50%;
+    } */
 
     .project-list-inner-container {
         /* flex-wrap: wrap; */
