@@ -68,6 +68,12 @@ if (document.querySelector(".comment-modal")) {
       document.querySelector(".comment-modal").style.display = "none";
       document.querySelector(".back-transparent-layer").style.display = "none";
     });
+
+  window.addEventListener("click", (e) => {
+    if (e.target == document.querySelector(".back-transparent-layer")) {
+      document.querySelector(".comment-modal").style.display = "none";
+    }
+  });
 }
 
 // Forwad Doc Modal
@@ -87,6 +93,11 @@ if (document.querySelector(".forwad-doc-modal")) {
           "none";
       });
     });
+  window.addEventListener("click", (e) => {
+    if (e.target == document.querySelector(".back-transparent-layer")) {
+      document.querySelector(".forwad-doc-modal").style.display = "none";
+    }
+  });
 }
 
 // Create New Folder Modal
@@ -131,6 +142,16 @@ if (document.querySelector(".right-side-content-inner-filter-dropdown")) {
           "none";
       });
     });
+
+  window.addEventListener("click", (e) => {
+    if (e.target == document.querySelector(".back-transparent-layer")) {
+      document
+        .querySelectorAll(".right-side-content-inner-filter-dropdown-inner")
+        .forEach((e) => {
+          e.style.display = "none";
+        });
+    }
+  });
 }
 
 // Hamburg Filter
@@ -157,6 +178,13 @@ if (document.querySelector(".right-side-content-inner-filter-hamburg")) {
           "none";
       });
     });
+  window.addEventListener("click", (e) => {
+    if (e.target == document.querySelector(".back-transparent-layer")) {
+      document.querySelector(
+        ".right-side-content-inner-filter-hamburg-inner"
+      ).style.display = "none";
+    }
+  });
 }
 
 if (document.querySelector(".drawing-page-right-side-content-outer-left")) {

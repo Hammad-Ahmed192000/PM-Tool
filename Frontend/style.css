@@ -222,6 +222,7 @@ header {
     align-items: center;
     gap: 16px;
     position: relative;
+    cursor: pointer;
 }
 
 .header-user-box div {
@@ -252,12 +253,13 @@ header {
     background-color: #fff;
     border-radius: 0 0 8px 8px;
     /* box-shadow: 0px 4px 24px 0px rgba(24, 31, 38, 0.12); */
-    padding: 20px 40px;
+    /* padding: 20px 0; */
     width: 100%;
     border: 1px solid #D8D8D8;
     border-top: none;
     display: none;
     z-index: 15;
+    overflow: hidden;
 }
 
 .header-user-box-profile-info-active {
@@ -267,11 +269,16 @@ header {
 .header-user-box-profile-info ul {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    /* gap: 12px; */
 }
 
 .header-user-box-profile-info ul li {
+    padding: 12px;
     list-style-type: none;
+}
+
+.header-user-box-profile-info ul li:hover {
+    background-color: #F6F6F9;
 }
 
 .header-user-box-profile-info ul li a {
@@ -359,7 +366,8 @@ header {
 
 .right-side-content-inner-search {
     position: relative;
-    width: 50%;
+    width: 40%;
+    /* max-width: 601px; */
 }
 
 .right-side-content-inner-search svg {
@@ -485,6 +493,10 @@ table tr td {
 .table-action-box {
     text-align: center;
     gap: 8px;
+}
+
+.table-action-box svg {
+    cursor: pointer;
 }
 
 .right-side-content-inner-filter-row {
@@ -724,7 +736,7 @@ table tr td {
 .add-task-input-box textarea,
 .add-task-input-box select {
     border: 1px solid rgba(16, 36, 55, 0.24);
-    padding: 13px 30px;
+    padding: 13px 15px 13px 30px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -1302,8 +1314,7 @@ input[type="checkbox"]:checked {
 .right-side-content-inner-filter-dropdown-inner-inner div {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding: 18px 31px 13px 30px;
+    padding: 12px 20px 10px 20px;
 
 }
 
@@ -1853,6 +1864,13 @@ select {
     background-position: right 17px center;
 }
 
+select option {
+    /* margin: 40px; */
+    /* background: rgb(0, 0, 0);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); */
+}
+
 /* input[type="date"] {
     padding: 5px;
     font-size: 16px;
@@ -1921,21 +1939,21 @@ select {
         width: 50%;
     }
 
-    /* 
+
     .right-side-content-inner-search {
-        width: 50%;
-    } */
-
-    .project-list-inner-container {
-        /* flex-wrap: wrap; */
-    }
-
-    .project-list-card-full {
-        /* width: 46%; */
+        width: 45%;
+        /* min-width: ; */
     }
 
     .right-side-content-inner-filter-dropdown-inner {
         width: 246px;
+    }
+}
+
+@media(max-width:1525px) {
+    .right-side-content-inner-search {
+        /* width: 55%; */
+        min-width: 511px;
     }
 }
 
@@ -1975,6 +1993,7 @@ select {
     .drawing-page-right-side-content-outer-right {
         width: auto;
     }
+
 }
 
 
