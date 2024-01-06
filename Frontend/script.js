@@ -335,6 +335,7 @@ if (document.querySelector(".page-end-back-btn")) {
 if (document.querySelector(".project-table")) {
   document.querySelectorAll(".project-page-tr-dropdown").forEach((e) => {
     e.addEventListener("click", (event) => {
+      console.log(event.target.parentElement);
       if (
         event.target.parentElement.classList.contains(
           "project-page-tr-dropdown"
@@ -351,4 +352,37 @@ if (document.querySelector(".project-table")) {
       }
     });
   });
+}
+
+if (document.querySelector(".add-role-btn-add-project")) {
+  document
+    .querySelector(".add-role-btn-add-project")
+    .addEventListener("click", () => {
+      let newRow = document.createElement("div");
+      newRow.innerHTML = `<div class="add-task-input-box">
+  <p>Member Name <span class="required-star">*</span></p>
+  <select name="" id="">
+      <option value="">John Doe</option>
+      <option value="">John</option>
+      <option value="">Doe</option>
+      <option value="">Adam</option>
+  </select>
+</div>
+<div class="add-task-input-box">
+  <p>Role <span class="required-star">*</span></p>
+  <select name="" id="">
+      <option value="">Architect</option>
+      <option value="">Engineer</option>
+      <option value="">Doctor</option>
+      <option value="">Software Engineer</option>
+  </select>
+</div>`;
+      newRow.classList.add("add-task-input-box-double");
+      document
+        .querySelector(".add-role-section")
+        .insertBefore(
+          newRow,
+          document.querySelector(".add-role-btn-add-project-btn-row")
+        );
+    });
 }
