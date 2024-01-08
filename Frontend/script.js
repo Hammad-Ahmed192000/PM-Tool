@@ -354,6 +354,16 @@ if (document.querySelector(".page-end-back-btn")) {
 
 if (document.querySelector(".project-table")) {
   document.querySelectorAll(".project-page-tr-dropdown").forEach((e) => {
+    e.querySelector("td input").addEventListener("input", (event) => {
+      if (event.target.checked == true) {
+        console.log(e.nextElementSibling);
+        // e.nextElementSibling.style.display = "none";
+        event.target.checked = false;
+      } else {
+        e.checked = true;
+        // e.nextElementSibling.style.display = "block";
+      }
+    });
     e.addEventListener("click", (event) => {
       if (
         event.target.parentElement.classList.contains(
@@ -363,6 +373,13 @@ if (document.querySelector(".project-table")) {
         event.target.parentElement.classList.toggle(
           "project-page-tr-dropdown-active"
         );
+        if (
+          event.target.parentElement.querySelector("td input").checked == true
+        ) {
+          event.target.parentElement.querySelector("td input").checked = false;
+        } else {
+          event.target.parentElement.querySelector("td input").checked = true;
+        }
         event.target.parentElement.nextElementSibling.classList.toggle(
           "project-activity-card-active"
         );
