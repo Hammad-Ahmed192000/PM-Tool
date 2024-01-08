@@ -128,7 +128,7 @@
                             <a href="./projectList.html">
                                 Card View
                             </a>
-                            <a href="#">
+                            <a href="calenderView.html">
                                 Timeline View
                             </a>
                             <a href="./addProject.html">
@@ -336,6 +336,18 @@
         document.addEventListener('DOMContentLoaded', function () {
             const calendarEl = document.getElementById('calendar')
             const calendar = new FullCalendar.Calendar(calendarEl, {
+                // customButtons: {
+                //     myCustomButton: {
+                //         text: ' Year!',
+                //         click: function () {
+                //             document.querySelector(".fc-nextYear-button").click();
+                //             // alert('clicked the custom button!');
+                //         }
+                //     }
+                // },
+                prevYear: {
+                    text: "prev year"
+                },
                 headerToolbar: {
                     start: '',
                     center: 'title',
@@ -371,23 +383,48 @@
 
     </script>
     <script>
-        let siteProgress = document.createElement("div")
-        siteProgress.innerHTML = `<div class="calennder-site-progress-box">
+        document.addEventListener("DOMContentLoaded", () => {
+
+            let siteProgress = document.createElement("div")
+            siteProgress.innerHTML = `<div class="calennder-site-progress-box">
             <p>50%</p>
             <div class="calennder-site-progress-line">
                 <div class="calennder-site-progress-line-inner"></div>
             </div>
         </div>`
-
-        setTimeout(() => {
             document.querySelectorAll(".fc-event-title").forEach((e) => {
                 const clonedSiteProgress = siteProgress.cloneNode(true);
                 e.appendChild(clonedSiteProgress);
             })
-        }, 200);
+            // setTimeout(() => {
+            //     document.querySelectorAll(".fc-event-title").forEach((e) => {
+            //         const clonedSiteProgress = siteProgress.cloneNode(true);
+            //         e.appendChild(clonedSiteProgress);
+            //     })
+            // }, 200);
+        })
+        document.querySelectorAll("button").forEach((e) => {
+            console.log(e);
+            e.addEventListener("click", () => {
+                console.log(e);
+                let siteProgress = document.createElement("div")
+                siteProgress.innerHTML = `<div class="calennder-site-progress-box">
+<p>50%</p>
+<div class="calennder-site-progress-line">
+    <div class="calennder-site-progress-line-inner"></div>
+</div>
+</div>`
 
+                setTimeout(() => {
+                    document.querySelectorAll(".fc-event-title").forEach((e) => {
+                        const clonedSiteProgress = siteProgress.cloneNode(true);
+                        e.appendChild(clonedSiteProgress);
+                    })
+                }, 200);
 
-        console.log("h");
+            })
+        })
+
     </script>
     <script src="script.js"></script>
 </body>

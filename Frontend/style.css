@@ -1905,6 +1905,7 @@ input[type="checkbox"]:checked {
     gap: 17px;
     /* justify-content: center; */
     padding: 12px;
+    text-decoration: none;
 }
 
 .folder-single-delete-icon {
@@ -2071,6 +2072,7 @@ select option {
     background-color: #fff;
     position: relative;
     overflow: hidden;
+    border-radius: 100px;
 }
 
 .calennder-site-progress-box .calennder-site-progress-line-inner {
