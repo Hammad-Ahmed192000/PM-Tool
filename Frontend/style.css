@@ -1918,6 +1918,7 @@ input[type="checkbox"]:checked {
 /* New Folder Modal  */
 .new-folder-modal {
     width: 31%;
+    min-width: 335px;
     position: absolute;
     top: 50%;
     left: 55%;
@@ -2162,8 +2163,8 @@ select option {
         margin: 0 0 0 72px;
     }
 
-    .project-list-inner-container {
-        /* margin: 0 30px 30px 30px; */
+    .new-folder-modal {
+        left: 50%;
     }
 }
 
