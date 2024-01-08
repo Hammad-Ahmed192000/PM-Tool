@@ -272,21 +272,22 @@ header {
     /* gap: 12px; */
 }
 
-.header-user-box-profile-info ul li {
+/* .header-user-box-profile-info ul li {
     padding: 12px;
     list-style-type: none;
-}
+} */
 
-.header-user-box-profile-info ul li:hover {
-    background-color: #F6F6F9;
-}
-
-.header-user-box-profile-info ul li a {
+.header-user-box-profile-info ul a {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     color: rgba(24, 31, 38, 0.8);
     line-height: 20px;
+    padding: 12px;
+}
+
+.header-user-box-profile-info ul a:hover {
+    background-color: #F6F6F9;
 }
 
 .hamburg-lines {

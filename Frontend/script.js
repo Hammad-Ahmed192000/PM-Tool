@@ -394,24 +394,34 @@ if (document.querySelector(".add-role-btn-add-project")) {
   document
     .querySelector(".add-role-btn-add-project")
     .addEventListener("click", () => {
+      customSelectBox();
       let newRow = document.createElement("div");
       newRow.innerHTML = `<div class="add-task-input-box">
   <p>Member Name <span class="required-star">*</span></p>
-  <select name="" id="">
-      <option value="">John Doe</option>
-      <option value="">John</option>
-      <option value="">Doe</option>
-      <option value="">Adam</option>
-  </select>
+  <div class="select-value-custom-box">
+  <input type="text" readonly placeholder="John Doe">
+  <img src="./images/select-arrow-down-black.svg" alt="">
+  <div>
+      <li>John Doe</li>
+      <li>John</li>
+      <li>Doe</li>
+      <li>Adam</li>
+  </div>
+</div>
 </div>
 <div class="add-task-input-box">
   <p>Role <span class="required-star">*</span></p>
-  <select name="" id="">
-      <option value="">Architect</option>
-      <option value="">Engineer</option>
-      <option value="">Doctor</option>
-      <option value="">Software Engineer</option>
-  </select>
+  <div class="select-value-custom-box">
+  <input type="text" readonly placeholder="Architect">
+  <img src="./images/select-arrow-down-black.svg" alt="">
+  <div>
+      <li>Architect</li>
+      <li>Builder</li>
+      <li>Electrician</li>
+      <li>Carpenter</li>
+      <li>Plumber</li>
+  </div>
+</div>
 </div>`;
       newRow.classList.add("add-task-input-box-double");
       document
@@ -420,11 +430,16 @@ if (document.querySelector(".add-role-btn-add-project")) {
           newRow,
           document.querySelector(".add-role-btn-add-project-btn-row")
         );
+      customSelectBox();
     });
 }
 
 // Custom Select Option Dropdown
 if (document.querySelector(".select-value-custom-box")) {
+  customSelectBox();
+}
+
+function customSelectBox() {
   document.querySelectorAll(".select-value-custom-box").forEach((element) => {
     element.querySelector("input").addEventListener("click", () => {
       if (
