@@ -823,8 +823,8 @@ table tr td {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 20px;
-    z-index: -1;
+    right: 17px;
+    user-select: all;
 }
 
 .select-value-custom-box input {
@@ -842,6 +842,7 @@ table tr td {
     border: 1px solid rgba(16, 36, 55, 0.24);
     border-top: none;
     display: none;
+    z-index: 5;
 }
 
 .active-select-value-custom-box-inner {
@@ -852,6 +853,7 @@ table tr td {
     list-style-type: none;
     color: #181F26;
     padding: 8px 12px;
+    cursor: pointer;
 }
 
 .select-value-custom-box div li:hover {

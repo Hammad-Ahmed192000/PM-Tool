@@ -184,14 +184,17 @@ if (document.querySelector(".right-side-content-inner-filter-hamburg")) {
           "none";
       });
     });
-  document
-    .querySelector(".project-choose-column-cross-btn")
-    .addEventListener("click", () => {
-      document.querySelector(
-        ".right-side-content-inner-filter-hamburg-inner"
-      ).style.display = "none";
-      document.querySelector(".back-transparent-layer").style.display = "none";
-    });
+  if (document.querySelector(".project-choose-column-cross-btn")) {
+    document
+      .querySelector(".project-choose-column-cross-btn")
+      .addEventListener("click", () => {
+        document.querySelector(
+          ".right-side-content-inner-filter-hamburg-inner"
+        ).style.display = "none";
+        document.querySelector(".back-transparent-layer").style.display =
+          "none";
+      });
+  }
   window.addEventListener("click", (e) => {
     if (e.target == document.querySelector(".back-transparent-layer")) {
       document.querySelector(
@@ -352,7 +355,6 @@ if (document.querySelector(".page-end-back-btn")) {
 if (document.querySelector(".project-table")) {
   document.querySelectorAll(".project-page-tr-dropdown").forEach((e) => {
     e.addEventListener("click", (event) => {
-      console.log(event.target.parentElement);
       if (
         event.target.parentElement.classList.contains(
           "project-page-tr-dropdown"
@@ -429,9 +431,6 @@ if (document.querySelector(".select-value-custom-box")) {
     });
 
     window.addEventListener("click", (e) => {
-      console.log(e.target);
-      console.log(element.querySelector(".select-value-custom-box div input"));
-      console.log(element);
       document
         .querySelectorAll(".select-value-custom-box")
         .forEach((element) => {

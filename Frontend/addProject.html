@@ -322,12 +322,21 @@
                     </div>
                     <div class="add-task-input-box">
                         <p>Company <span class="required-star">*</span></p>
-                        <select name="" id="">
+                        <!-- <select name="" id="">
                             <option value="">Select Company</option>
                             <option value="">Company One</option>
                             <option value="">Company Two</option>
                             <option value="">Company Three</option>
-                        </select>
+                        </select> -->
+                        <div class="select-value-custom-box">
+                            <input type="text" readonly placeholder="Select Company">
+                            <img src="./images/select-arrow-down-black.svg" alt="">
+                            <div>
+                                <li>Company One</li>
+                                <li>Company Two</li>
+                                <li>Company Three</li>
+                            </div>
+                        </div>
                     </div>
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
@@ -342,12 +351,22 @@
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
                             <p>Project Manager <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="Project Manager">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>John Dow</li>
+                                    <li>Alex Kaur</li>
+                                    <li>Alexander</li>
+                                    <li>Peston</li>
+                                </div>
+                            </div>
+                            <!-- <select name="" id="">
                                 <option value="">Project Manger</option>
                                 <option value="">Project Manger One</option>
                                 <option value="">Project Manger Two</option>
                                 <option value="">Project Manger Three</option>
-                            </select>
+                            </select> -->
                         </div>
                         <div class="add-task-input-box">
                             <p>Project Executive</p>
@@ -358,7 +377,7 @@
                         <div class="add-task-input-box">
                             <p>Description <span class="required-star">*</span></p>
                             <textarea name="" id="" cols="30" rows="5"
-                                placeholder="Write Something about Task"></textarea>
+                                placeholder="Write Something about Project"></textarea>
                         </div>
                     </div>
                 </div>
@@ -374,21 +393,42 @@
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
                             <p>Member Name <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">John Doe</option>
                                 <option value="">John</option>
                                 <option value="">Doe</option>
                                 <option value="">Adam</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="John Doe">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>Smith Adam</li>
+                                    <li>Alex Kaur</li>
+                                    <li>Alexander</li>
+                                    <li>Peston</li>
+                                </div>
+                            </div>
                         </div>
                         <div class="add-task-input-box">
                             <p>Role <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">Architect</option>
                                 <option value="">Engineer</option>
                                 <option value="">Doctor</option>
                                 <option value="">Software Engineer</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="Architect">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>Architect</li>
+                                    <li>Builder</li>
+                                    <li>Plumber</li>
+                                    <li>Carpenter</li>
+                                    <li>Electrician</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="add-project-add-role-plus-btn-row add-role-btn-add-project-btn-row">
@@ -423,41 +463,82 @@
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
                             <p>Building No. <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">4</option>
                                 <option value="">1</option>
                                 <option value="">2</option>
                                 <option value="">3</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="4">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                </div>
+                            </div>
                         </div>
                         <div class="add-task-input-box">
                             <p>Floor <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">3</option>
                                 <option value="">1</option>
                                 <option value="">2</option>
                                 <option value="">4</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="3">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
                             <p>Subject <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">Architect</option>
                                 <option value="">Computing</option>
                                 <option value="">Medicine</option>
                                 <option value="">Science</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="Architect">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>Architect</li>
+                                    <li>Builder</li>
+                                    <li>Plumber</li>
+                                    <li>Carpenter</li>
+                                    <li>Electrician</li>
+                                </div>
+                            </div>
                         </div>
                         <div class="add-task-input-box">
                             <p>Revision <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">A</option>
                                 <option value="">B</option>
                                 <option value="">C</option>
                                 <option value="">D</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="A">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>A</li>
+                                    <li>B</li>
+                                    <li>C</li>
+                                    <li>D</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="add-task-input-box-double">
@@ -467,23 +548,43 @@
                         </div>
                         <div class="add-task-input-box">
                             <p>Yard Stick <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">1:100</option>
                                 <option value="">2:100</option>
                                 <option value="">3:100</option>
                                 <option value="">4:100</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="1:100">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>1:100</li>
+                                    <li>2:100</li>
+                                    <li>3:100</li>
+                                    <li>4:100</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
                             <p>Format <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">A3</option>
                                 <option value="">A4</option>
                                 <option value="">Landscape</option>
                                 <option value="">Portrait</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="A3">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>A3</li>
+                                    <li>A4</li>
+                                    <li>Landscape</li>
+                                    <li>Portrait</li>
+                                </div>
+                            </div>
                         </div>
                         <div class="add-task-input-box">
                             <p>End Date <span class="required-star">*</span></p>
@@ -493,19 +594,36 @@
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
                             <p>Last Edited (Name) <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">Jensen Nesse</option>
                                 <option value="">Adam</option>
                                 <option value="">John</option>
                                 <option value="">Doe</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="Jensen Nesse">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>Jensen Nesse</li>
+                                    <li>John Doe</li>
+                                    <li>Smith Adam</li>
+                                </div>
+                            </div>
                         </div>
                         <div class="add-task-input-box">
                             <p>Status Drawing <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">During Work</option>
                                 <option value="">During Holidays</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="During Work">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>During Work</li>
+                                    <li>During Holidays</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="add-task-input-box-double">
@@ -555,18 +673,34 @@
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
                             <p>Status Invoicing <span class="required-star">*</span></p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">Finished</option>
                                 <option value="">Pending</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="Finished">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>Finished</li>
+                                    <li>Pending</li>
+                                </div>
+                            </div>
                         </div>
                         <div class="add-task-input-box">
                             <p>Status of Building Case</p>
-                            <select name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="">During Work</option>
                                 <option value="">During Work</option>
                                 <option value="">During Work</option>
-                            </select>
+                            </select> -->
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="During Work">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>During Work</li>
+                                    <li>During Holidays</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -586,7 +720,7 @@
                         <div class="add-task-input-box">
                             <p>Description <span class="required-star">*</span></p>
                             <textarea name="" id="" cols="30" rows="5"
-                                placeholder="Write Something about Task"></textarea>
+                                placeholder="Write Something about Activity"></textarea>
                         </div>
                         <div class="add-project-activity-bottom-fields">
                             <div class="add-task-input-box-double ">
@@ -596,10 +730,19 @@
                                 </div>
                                 <div class="add-task-input-box">
                                     <p>Status</p>
-                                    <select name="" id="">
+                                    <!-- <select name="" id="">
                                         <option value="">In Progress</option>
                                         <option value="">Completed</option>
-                                    </select>
+                                    </select> -->
+                                    <div class="select-value-custom-box">
+                                        <input type="text" readonly placeholder="In Progress">
+                                        <img src="./images/select-arrow-down-black.svg" alt="">
+                                        <div>
+                                            <li>In Progress</li>
+                                            <li>To Do</li>
+                                            <li>Done</li>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="add-task-input-box-double">
@@ -634,10 +777,19 @@
                                 </div>
                                 <div class="add-task-input-box">
                                     <p>Status</p>
-                                    <select name="" id="" style="background-color: #fff; opacity: 0.8;">
+                                    <!-- <select name="" id="" style="background-color: #fff; opacity: 0.8;">
                                         <option value="">In Progress</option>
                                         <option value="">Completed</option>
-                                    </select>
+                                    </select> -->
+                                    <div class="select-value-custom-box">
+                                        <input type="text" readonly placeholder="In Progress">
+                                        <img src="./images/select-arrow-down-black.svg" alt="">
+                                        <div>
+                                            <li>In Progress</li>
+                                            <li>To Do</li>
+                                            <li>Done</li>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="add-task-input-box-double">
