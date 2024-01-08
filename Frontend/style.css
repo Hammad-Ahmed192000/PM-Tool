@@ -2017,6 +2017,12 @@ select option {
 
 
 /* Calender Styling  */
+.fc-media-screen {
+    /* width: 95.5%; */
+    /* margin: 0 auto; */
+    padding: 16px 36px;
+
+}
 
 .fc-h-event .fc-event-title-container {
     height: 48px;

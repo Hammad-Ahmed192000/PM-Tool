@@ -310,17 +310,37 @@
                 </div>
             </header>
             <div class="page-name-heading wrap">
-                <p>Add Task</p>
+                <p>Calender View</p>
+                <div class="page-name-heading-btns">
+                    <a href="./addProject.html" class="page-name-heading-black-box width-auto">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_2_9362" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="22" height="22">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.6875 5.5C11.6875 5.1203 11.3797 4.8125 11 4.8125C10.6203 4.8125 10.3125 5.1203 10.3125 5.5V10.3125H5.5C5.1203 10.3125 4.8125 10.6203 4.8125 11C4.8125 11.3797 5.1203 11.6875 5.5 11.6875H10.3125V16.5C10.3125 16.8797 10.6203 17.1875 11 17.1875C11.3797 17.1875 11.6875 16.8797 11.6875 16.5V11.6875H16.5C16.8797 11.6875 17.1875 11.3797 17.1875 11C17.1875 10.6203 16.8797 10.3125 16.5 10.3125H11.6875V5.5Z"
+                                    fill="#28303F" />
+                            </mask>
+                            <g mask="url(#mask0_2_9362)">
+                                <rect width="22" height="22" fill="white" />
+                            </g>
+                        </svg>
+                        Add New Project
+                    </a>
+                </div>
             </div>
             <div id='calendar'></div>
         </div>
     </div>
 
     <script>
-
         document.addEventListener('DOMContentLoaded', function () {
             const calendarEl = document.getElementById('calendar')
             const calendar = new FullCalendar.Calendar(calendarEl, {
+                headerToolbar: {
+                    start: '',
+                    center: 'title',
+                    end: 'prevYear,prev,next,nextYear'
+                },
                 initialView: 'dayGridMonth',
                 editable: false,
                 droppable: false,
@@ -329,41 +349,22 @@
                     {
                         id: 'a',
                         title: 'Kendra Conn Website',
-                        extendedProps: {
-                            department: 'BioChemistry'
-                        },
-                        description: 'Lecture',
-                        // eventContent: '<div><p>hello</p><p>world<p></div>',
-                        // title: { '<i>some html</i>' },
                         start: '2024-01-03',
                         end: '2024-01-06',
                     },
                     {
                         id: 'b',
                         title: 'Construction Website',
-                        extendedProps: {
-                            department: 'BioChemistry'
-                        },
-                        description: 'Lecture',
-                        // eventContent: '<div><p>hello</p><p>world<p></div>',
-                        // title: { '<i>some html</i>' },
                         start: '2024-01-03',
                         end: '2024-01-06',
                     },
                     {
                         id: 'c',
                         title: 'Construction Website',
-                        extendedProps: {
-                            department: 'BioChemistry'
-                        },
-                        description: 'Lecture',
-                        // eventContent: '<div><p>hello</p><p>world<p></div>',
-                        // title: { '<i>some html</i>' },
                         start: '2024-01-09',
                         end: '2024-01-12',
                     }
                 ],
-                borderColor: '#000',
             })
             calendar.render()
         })
@@ -378,13 +379,9 @@
             </div>
         </div>`
 
-        console.log(document.querySelector(".fc-event-main-frame") ? "yes" : "no");
         setTimeout(() => {
             document.querySelectorAll(".fc-event-title").forEach((e) => {
-                console.log(e);
-                console.log(siteProgress);
                 const clonedSiteProgress = siteProgress.cloneNode(true);
-
                 e.appendChild(clonedSiteProgress);
             })
         }, 200);
