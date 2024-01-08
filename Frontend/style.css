@@ -2044,6 +2044,39 @@ select option {
     background-color: transparent;
 }
 
+.calennder-site-progress-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.calennder-site-progress-box p {
+    justify-self: flex-end;
+    align-self: flex-end;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 10px;
+    color: #181F26;
+}
+
+.calennder-site-progress-box .calennder-site-progress-line {
+    width: 100%;
+    height: 6px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.calennder-site-progress-box .calennder-site-progress-line-inner {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #085DB7;
+
+}
+
 /* PlaceHolder Color  */
 ::placeholder {
     color: #BABABAed;

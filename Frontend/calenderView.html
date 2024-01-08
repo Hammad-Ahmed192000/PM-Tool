@@ -313,10 +313,6 @@
                 <p>Add Task</p>
             </div>
             <div id='calendar'></div>
-            <div>
-                <p>hello</p>
-                <p>world</p>
-            </div>
         </div>
     </div>
 
@@ -326,8 +322,8 @@
             const calendarEl = document.getElementById('calendar')
             const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
-                editable: true,
-                droppable: true,
+                editable: false,
+                droppable: false,
                 timeZone: 'UTC',
                 events: [
                     {
@@ -378,7 +374,7 @@
         siteProgress.innerHTML = `<div class="calennder-site-progress-box">
             <p>50%</p>
             <div class="calennder-site-progress-line">
-                <div class="calennder-site-progress-line-inner">abc</div>
+                <div class="calennder-site-progress-line-inner"></div>
             </div>
         </div>`
 
@@ -386,9 +382,12 @@
         setTimeout(() => {
             document.querySelectorAll(".fc-event-title").forEach((e) => {
                 console.log(e);
-                e.appendChild(siteProgress);
+                console.log(siteProgress);
+                const clonedSiteProgress = siteProgress.cloneNode(true);
+
+                e.appendChild(clonedSiteProgress);
             })
-        }, 3000);
+        }, 200);
 
 
         console.log("h");
