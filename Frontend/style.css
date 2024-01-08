@@ -678,7 +678,7 @@ table tr td {
 }
 
 .project-page-column-filter {
-    width: 540px !important;
+    width: 540px;
 }
 
 .project-page-column-filter-inner {
@@ -813,6 +813,27 @@ table tr td {
 .add-task-input-check-row input {
     width: 18px;
     height: 18px;
+}
+
+.select-value-custom-box {
+    position: relative;
+}
+
+.select-value-custom-box div {
+    background-color: #fff;
+    border: 1px solid #181F26;
+    /* border-top: none; */
+}
+
+.select-value-custom-box div li {
+    list-style-type: none;
+    color: #181F26;
+    padding: 8px 12px;
+}
+
+.select-value-custom-box div li:hover {
+    color: #fff;
+    background-color: #181F26;
 }
 
 input[type="checkbox"] {
@@ -1781,6 +1802,10 @@ input[type="checkbox"]:checked {
     padding: 0 16px;
 }
 
+.drawing-page-right-side-content-outer-left-top p {
+    user-select: none;
+}
+
 .drawing-page-right-side-content-outer-left ul {
     margin: 27px 0 10px 0;
     display: flex;
@@ -1985,6 +2010,22 @@ select option {
 
 /* Media Queries  */
 
+/* Height Media Queries  */
+
+@media(max-height:645px) {
+    .project-page-column-filter {
+        top: 70%;
+    }
+}
+
+@media(max-height:455px) {
+    .project-page-column-filter {
+        top: 85%;
+    }
+}
+
+
+/* Width Media Queries  */
 @media(max-width:1650px) {
     .header-search-row {
         width: 50%;
@@ -2055,6 +2096,10 @@ select option {
 }
 
 @media (max-width:1024px) {
+    header {
+        justify-content: space-between;
+    }
+
     .hamburg-lines {
         display: block;
     }
@@ -2188,6 +2233,10 @@ select option {
         max-width: 361px;
     }
 
+    .project-page-column-filter {
+        width: 90%;
+    }
+
 }
 
 @media(max-width:550px) {
@@ -2291,6 +2340,24 @@ select option {
     .right-side-content-inner-filter-hamburg-inner {
         right: -120px;
     }
+
+    .project-page-column-filter {
+        width: 90%;
+    }
+
+    .right-side-content-inner-filter-hamburg-inner-inner {
+        padding: 13px 17px 20px 17px;
+    }
+
+    .right-side-content-inner-filter-hamburg-inner-subheading {
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .project-page-column-filter-inner-col div label {
+        font-size: 12px;
+    }
+
 }
 
 @media(max-width:355px) {

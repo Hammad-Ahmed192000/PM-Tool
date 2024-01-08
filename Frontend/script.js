@@ -118,6 +118,12 @@ if (document.querySelector(".new-folder-modal")) {
           "none";
       });
     });
+  window.addEventListener("click", (e) => {
+    if (e.target == document.querySelector(".back-transparent-layer")) {
+      document.querySelector(".new-folder-modal").style.display = "none";
+      document.querySelector(".back-transparent-layer").style.display = "none";
+    }
+  });
 }
 
 // Other Filters
@@ -177,6 +183,14 @@ if (document.querySelector(".right-side-content-inner-filter-hamburg")) {
         document.querySelector(".back-transparent-layer").style.display =
           "none";
       });
+    });
+  document
+    .querySelector(".project-choose-column-cross-btn")
+    .addEventListener("click", () => {
+      document.querySelector(
+        ".right-side-content-inner-filter-hamburg-inner"
+      ).style.display = "none";
+      document.querySelector(".back-transparent-layer").style.display = "none";
     });
   window.addEventListener("click", (e) => {
     if (e.target == document.querySelector(".back-transparent-layer")) {
@@ -385,4 +399,7 @@ if (document.querySelector(".add-role-btn-add-project")) {
           document.querySelector(".add-role-btn-add-project-btn-row")
         );
     });
+}
+
+if (document.querySelector(".select-value-custom-box")) {
 }
