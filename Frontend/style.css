@@ -1568,6 +1568,7 @@ input[type="checkbox"]:checked {
 .forwad-doc-modal {
     position: absolute;
     width: 30%;
+    min-width: 335px;
     top: 50%;
     left: 55%;
     transform: translate(-50%, -50%);
@@ -1603,6 +1604,19 @@ input[type="checkbox"]:checked {
     letter-spacing: 0em;
     text-align: left;
     color: #1E1E20;
+}
+
+.forwad-doc-inner input {
+    width: 100%;
+    border: 1px solid rgba(16, 36, 55, 0.24);
+    padding: 13px 15px 13px 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #BABABA;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
 }
 
 .modal-inner select {
@@ -2024,6 +2038,12 @@ select option {
     flex-direction: row;
 }
 
+.fc-event,
+.fc-event-draggable {
+    border: none;
+    background-color: transparent;
+}
+
 /* PlaceHolder Color  */
 ::placeholder {
     color: #BABABAed;
@@ -2163,7 +2183,8 @@ select option {
         margin: 0 0 0 72px;
     }
 
-    .new-folder-modal {
+    .new-folder-modal,
+    .forwad-doc-modal {
         left: 50%;
     }
 }
