@@ -2025,6 +2025,14 @@ select option {
 
 }
 
+.fc-col-header {
+    margin: 0;
+}
+
+.fc-col-header-cell {
+    padding: 10px 5px !important;
+}
+
 .fc-h-event .fc-event-title-container {
     height: 48px;
     background: #E4E4E4;
