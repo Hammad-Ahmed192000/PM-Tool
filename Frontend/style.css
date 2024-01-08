@@ -819,10 +819,33 @@ table tr td {
     position: relative;
 }
 
+.select-value-custom-box img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    z-index: -1;
+}
+
+.select-value-custom-box input {
+    cursor: pointer;
+    z-index: 1;
+}
+
 .select-value-custom-box div {
+    position: absolute;
+    top: 47.3px;
+    left: 0;
+    width: 100%;
     background-color: #fff;
-    border: 1px solid #181F26;
-    /* border-top: none; */
+    /* border: 1px solid #181F26; */
+    border: 1px solid rgba(16, 36, 55, 0.24);
+    border-top: none;
+    display: none;
+}
+
+.active-select-value-custom-box-inner {
+    display: block;
 }
 
 .select-value-custom-box div li {

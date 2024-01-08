@@ -215,6 +215,9 @@ if (document.querySelector(".activity-task-inner")) {
   document
     .querySelector(".activity-task-activity-box-btn-add-task")
     .addEventListener("click", (e) => {
+      document.querySelector(
+        ".add-project-activity-bottom-fields"
+      ).style.display = "none";
       document.querySelector(".activity-task-inner").style.display = "block";
       e.target.textContent = "Delete Activity";
     });
@@ -401,5 +404,43 @@ if (document.querySelector(".add-role-btn-add-project")) {
     });
 }
 
+// Custom Select Option Dropdown
 if (document.querySelector(".select-value-custom-box")) {
+  document.querySelectorAll(".select-value-custom-box").forEach((element) => {
+    element.querySelector("input").addEventListener("click", () => {
+      if (
+        element.querySelector(".select-value-custom-box div").style.display ==
+        "block"
+      ) {
+        element.querySelector(".select-value-custom-box div").style.display =
+          "none";
+      } else {
+        element.querySelector(".select-value-custom-box div").style.display =
+          "block";
+      }
+    });
+    element.querySelectorAll(".select-value-custom-box div li").forEach((e) => {
+      e.addEventListener("click", (event) => {
+        event.target.parentElement.parentElement.querySelector("input").value =
+          event.target.textContent;
+        element.querySelector(".select-value-custom-box div").style.display =
+          "none";
+      });
+    });
+
+    window.addEventListener("click", (e) => {
+      console.log(e.target);
+      console.log(element.querySelector(".select-value-custom-box div input"));
+      console.log(element);
+      document
+        .querySelectorAll(".select-value-custom-box")
+        .forEach((element) => {
+          if (e.target != element.querySelector("input")) {
+            element.querySelector(
+              ".select-value-custom-box div"
+            ).style.display = "none";
+          }
+        });
+    });
+  });
 }
