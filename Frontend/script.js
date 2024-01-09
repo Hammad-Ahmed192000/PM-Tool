@@ -54,6 +54,28 @@ if (document.querySelector(".header-user-box")) {
   });
 }
 
+// Deleet Modal
+if (document.querySelector(".delete-modal")) {
+  document.querySelectorAll(".delete-icon").forEach((e) => {
+    e.addEventListener("click", () => {
+      document.querySelector(".delete-modal").style.display = "block";
+      document.querySelector(".back-transparent-layer").style.display = "block";
+    });
+  });
+  document.querySelectorAll(".delete-modal-btns-row button").forEach((e) => {
+    e.addEventListener("click", () => {
+      document.querySelector(".delete-modal").style.display = "none";
+      document.querySelector(".back-transparent-layer").style.display = "none";
+    });
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target == document.querySelector(".back-transparent-layer")) {
+      document.querySelector(".delete-modal").style.display = "none";
+    }
+  });
+}
+
 // Comment Modal
 if (document.querySelector(".comment-modal")) {
   document.querySelectorAll(".document-table-comment").forEach((e) => {
