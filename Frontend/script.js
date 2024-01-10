@@ -154,6 +154,11 @@ if (document.querySelector(".right-side-content-inner-filter-dropdown")) {
     .querySelectorAll(".right-side-content-inner-filter-dropdown-clickable")
     .forEach((e) => {
       e.addEventListener("click", () => {
+        document
+          .querySelectorAll(".right-side-content-inner-filter-dropdown-inner")
+          .forEach((e) => {
+            e.style.display = "none";
+          });
         e.parentElement.querySelector(
           ".right-side-content-inner-filter-dropdown-inner"
         ).style.display = "block";
@@ -182,15 +187,37 @@ if (document.querySelector(".right-side-content-inner-filter-dropdown")) {
   });
 }
 
+if (document.querySelector(".right-side-content-inner-filter-row-mobile")) {
+  document
+    .querySelector(".mobile-filter-heading-box")
+    .addEventListener("click", () => {
+      document.querySelector(
+        ".right-side-content-inner-filter-row-mobile-inner"
+      ).style.display = "block";
+      document.querySelector(".back-transparent-layer").style.display = "block";
+    });
+
+  window.addEventListener("click", (e) => {
+    if (e.target == document.querySelector(".back-transparent-layer")) {
+      document.querySelector(
+        ".right-side-content-inner-filter-row-mobile-inner"
+      ).style.display = "none";
+    }
+  });
+}
+
 // Hamburg Filter
 if (document.querySelector(".right-side-content-inner-filter-hamburg")) {
   document
-    .querySelector(".right-side-content-inner-filter-hamburg-line")
-    .addEventListener("click", () => {
-      document.querySelector(
-        ".right-side-content-inner-filter-hamburg-inner"
-      ).style.display = "block";
-      document.querySelector(".back-transparent-layer").style.display = "block";
+    .querySelectorAll(".right-side-content-inner-filter-hamburg-line")
+    .forEach((e) => {
+      e.addEventListener("click", (event) => {
+        e.parentElement.querySelector(
+          ".right-side-content-inner-filter-hamburg-inner"
+        ).style.display = "block";
+        document.querySelector(".back-transparent-layer").style.display =
+          "block";
+      });
     });
 
   document
@@ -199,9 +226,11 @@ if (document.querySelector(".right-side-content-inner-filter-hamburg")) {
     )
     .forEach((e) => {
       e.addEventListener("click", () => {
-        document.querySelector(
-          ".right-side-content-inner-filter-hamburg-inner"
-        ).style.display = "none";
+        document
+          .querySelectorAll(".right-side-content-inner-filter-hamburg-inner")
+          .forEach((e) => {
+            e.style.display = "none";
+          });
         document.querySelector(".back-transparent-layer").style.display =
           "none";
       });
@@ -219,9 +248,11 @@ if (document.querySelector(".right-side-content-inner-filter-hamburg")) {
   }
   window.addEventListener("click", (e) => {
     if (e.target == document.querySelector(".back-transparent-layer")) {
-      document.querySelector(
-        ".right-side-content-inner-filter-hamburg-inner"
-      ).style.display = "none";
+      document
+        .querySelectorAll(".right-side-content-inner-filter-hamburg-inner")
+        .forEach((e) => {
+          e.style.display = "none";
+        });
     }
   });
 }
