@@ -247,13 +247,23 @@
         </div>
 
         <div class="right-side-content">
-            <header class="wrap">
+            <header class="wrap document-page-header">
+
                 <svg class="hamburg-lines" xmlns="http://www.w3.org/2000/svg" height="16" width="14"
                     viewBox="0 0 448 512">
                     <path
                         d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                 </svg>
-
+                <div class="page-name-heading document-page-heading">
+                    <p>Documents</p>
+                    <svg width="15" height="15" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="margin-top: 4px;">
+                        <path
+                            d="M55.8914 29.0811L27.3854 0.375078C27.1478 0.13749 26.8353 0 26.4978 0H4.99324C4.30555 0 3.74294 0.562618 3.74294 1.2503C3.74294 1.58787 3.88042 1.90048 4.10547 2.13795L31.9738 29.9688L4.13056 57.8746C3.64295 58.3622 3.64295 59.1499 4.13056 59.6375C4.36814 59.8751 4.68063 60 5.0182 60H26.5227C26.8603 60 27.1729 59.8625 27.4104 59.6249L55.8914 30.8314C56.379 30.3564 56.379 29.5687 55.8914 29.0811Z"
+                            fill="#181F26" />
+                    </svg>
+                    <p class="page-name-heading-folder-name">Projects</p>
+                </div>
                 <!-- <div class="header-search-row">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -289,8 +299,16 @@
                 </div>
             </header>
             <div class="page-name-heading wrap">
-                <p>Documents</p>
-                <div class="page-name-heading-btns">
+                <!-- <p>Documents</p> -->
+                <div class="page-name-heading-btns document-page-top-btns-row">
+                    <div>
+                        <a href="#" class="page-name-heading-black-box">
+                            Project
+                        </a>
+                        <a href="#" class="page-name-heading-transparent-box">
+                            Company
+                        </a>
+                    </div>
                     <a href="./drawingDetails.html" class="page-name-heading-black-box">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -304,6 +322,57 @@
             <div class="right-side-content-inner">
                 <div class="right-side-content-inner-filter-row">
                     <div class="right-side-content-inner-filter-row-left">
+                        <div class="right-side-content-inner-filter-row-left-single">
+                            <p>New Folder</p>
+                            <!-- <div class="document-page-folder-menu">
+                                <p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_533_14999" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="0" y="0" width="24" height="24">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                                fill="#28303F" />
+                                        </mask>
+                                        <g mask="url(#mask0_533_14999)">
+                                            <rect y="24" width="24" height="24" transform="rotate(-90 0 24)"
+                                                fill="#181F26" fill-opacity="0.8" />
+                                        </g>
+                                    </svg>
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196667 15.0217 0.000666667 14.5507 0 14V2C0 1.45 0.196 0.979333 0.588 0.588C0.98 0.196666 1.45067 0.000666667 2 0H8L10 2H18C18.55 2 19.021 2.196 19.413 2.588C19.805 2.98 20.0007 3.45067 20 4V14C20 14.55 19.8043 15.021 19.413 15.413C19.0217 15.805 18.5507 16.0007 18 16H2Z"
+                                            fill="#0EA5E8" />
+                                    </svg>
+                                    Projectfilter
+                                </p>
+                                <div class="document-page-folder-menu-inner">
+                                    <div>
+                                        ARK
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="4"
+                                            viewBox="0 0 128 512">
+                                            <path
+                                                d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z" />
+                                        </svg> 
+                                    </div>
+                                    <div>ARK
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="4"
+                                            viewBox="0 0 128 512">
+                                            <path
+                                                d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>ARK
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="4"
+                                            viewBox="0 0 128 512">
+                                            <path
+                                                d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
                         <div class="right-side-content-inner-filter-row-left-single">
                             <p>Search Drawing</p>
                             <div class="documents-search-filter-container">

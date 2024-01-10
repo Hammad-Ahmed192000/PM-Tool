@@ -297,10 +297,6 @@ header {
     /* gap: 12px; */
 }
 
-/* .header-user-box-profile-info ul li {
-    padding: 12px;
-    list-style-type: none;
-} */
 
 .header-user-box-profile-info ul a {
     text-decoration: none;
@@ -313,6 +309,23 @@ header {
 
 .header-user-box-profile-info ul a:hover {
     background-color: #F6F6F9;
+}
+
+.document-page-header {
+    justify-content: space-between;
+}
+
+.document-page-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.document-page-top-btns-row {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
 }
 
 .hamburg-lines {
@@ -332,6 +345,8 @@ header {
     display: flex;
     align-items: center;
     gap: 16px !important;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 .page-name-heading-icon-row svg path {
@@ -389,10 +404,12 @@ header {
 .page-name-heading-gray-box {
     color: #181F26;
     background-color: rgba(24, 31, 38, 0.24);
+    border: 2px solid rgba(24, 31, 38, 0.24);
 }
 
 .page-name-heading-black-box {
     background-color: #181F26;
+    border: 2px solid #181F26;
     color: #fff;
 }
 
@@ -658,11 +675,16 @@ table tr td {
     line-height: 20px;
     color: #181F26;
     border: 1px solid #ECEDEF;
-    padding: 13px 16px;
+    padding: 12px 10px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.right-side-content-inner-filter-row-right-sortby svg {
+    width: 15px;
+    height: 15px;
 }
 
 .right-side-content-inner-filter-hamburg {
@@ -1546,6 +1568,9 @@ input[type="checkbox"]:checked {
     color: #181F26;
 }
 
+/* Document Page Folder Menu  */
+.document-page-folder-menu {}
+
 .document-status-box p {
     border-radius: 6px;
     padding: 4px 12px;
@@ -1905,7 +1930,7 @@ input[type="checkbox"]:checked {
 .drawing-page-name-heading div {
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 9px;
 }
 
 .drawing-page-name-heading div .page-name-heading-folder-name {
@@ -2383,6 +2408,18 @@ select {
 @media (max-width:1024px) {
     header {
         justify-content: space-between;
+        row-gap: 5px;
+    }
+
+    .document-page-header {
+        flex-wrap: wrap;
+
+    }
+
+    .document-page-heading {
+        width: 100%;
+        order: 3;
+        justify-content: center;
     }
 
     .hamburg-lines {
@@ -2438,6 +2475,11 @@ select {
 
     .page-name-heading p {
         font-size: 20px;
+    }
+
+    .drawing-page-name-heading div .page-name-heading-folder-name {
+        font-size: 18px;
+        margin-top: 3px;
     }
 
     .add-task-inner-heading {
@@ -2502,17 +2544,27 @@ select {
         margin: 0 36px;
     }
 
+    .right-side-content-inner-search {
+        /* width: 55%; */
+        min-width: auto;
+    }
 }
 
 @media(max-width:630px) {
     .page-name-heading {
         flex-direction: column;
+        gap: 3px;
+        margin-bottom: 5px;
+    }
+
+    .document-page-heading {
+        flex-direction: row;
+        gap: 12px;
     }
 
     .flex-row {
         flex-direction: row;
     }
-
 
     .project-list-card-full {
         min-width: 361px;
@@ -2551,7 +2603,11 @@ select {
 
     .page-name-heading-gray-box,
     .page-name-heading-black-box {
-        width: 48%;
+        /* width: 48%; */
+    }
+
+    .min-w-180px {
+        /* min-width: 180px; */
     }
 
     .width-auto {
