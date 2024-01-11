@@ -94,6 +94,11 @@ body {
     user-select: none;
 }
 
+.sidebar ul li a {
+    color: #8F9095;
+    text-decoration: none;
+}
+
 .sidebar ul li p:hover {
     scale: 1.1;
 }
@@ -589,6 +594,52 @@ table tr td {
 
 .table-action-box svg {
     cursor: pointer;
+}
+
+
+
+/* Border None Utility Classes  */
+.table-cell-bold-text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #181F26;
+}
+
+.text-red {
+    color: #F1595C;
+}
+
+.text-green {
+    color: #09BF52;
+}
+
+.border-left-none {
+    border-left: none;
+}
+
+.border-right-none {
+    border-right: none;
+}
+
+.border-left-right-none {
+    border-left: none;
+    border-right: none;
+}
+
+.border-top-none {
+    border-top: none;
+}
+
+.border-bottom-none {
+    border-bottom: none;
+}
+
+.border-top-bottom-none {
+    border-top: none;
+    border-bottom: none;
 }
 
 .project-view-icon-anchor {
