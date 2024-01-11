@@ -2568,6 +2568,41 @@ select {
     background-color: #CEE6FF;
 }
 
+/* Project Sub Folder Page  */
+.poject-subfolder-heading {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.folder-with-detail-list-with-subfolder {
+    flex-direction: column;
+    padding: 0 !important;
+}
+
+.folder-with-detail-list-with-subfolder-outer {}
+
+.folder-with-detail-list-with-subfolder-outer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 20px 11px 52px;
+}
+
+.folder-with-detail-list-with-subfolder-inner {
+    padding: 11px 20px 11px 52px;
+}
+
+.poject-subfolder-heading .page-name-heading-folder-name {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #5F6368;
+}
+
 /* PlaceHolder Color  */
 ::placeholder {
     color: #BABABAed;
