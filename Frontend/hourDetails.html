@@ -21,7 +21,7 @@
                             d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                     </svg>
                 </div>
-                <img class="abc" src="./images/logo.svg" alt="">
+                <img src="./images/logo.svg" alt="">
                 <ul>
                     <li>
                         <div>
@@ -115,9 +115,30 @@
                             </a>
                         </div>
                     </li>
-                    <li>
+                    <li class="sidebar-active-page">
                         <div class="sidebar-option-main">
                             <div>
+                                <svg class="sidebar-option-back-shadow" width="69" height="80" viewBox="0 0 69 80"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3" filter="url(#filter0_f_10_2304)">
+                                        <circle cx="23" cy="34" r="30" fill="url(#paint0_radial_10_2304)" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_f_10_2304" x="-23" y="-12" width="92" height="92"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                result="shape" />
+                                            <feGaussianBlur stdDeviation="8" result="effect1_foregroundBlur_10_2304" />
+                                        </filter>
+                                        <radialGradient id="paint0_radial_10_2304" cx="0" cy="0" r="1"
+                                            gradientUnits="userSpaceOnUse"
+                                            gradientTransform="translate(23 34) rotate(90) scale(30)">
+                                            <stop stop-color="#E0FDFF" />
+                                            <stop offset="1" stop-color="white" stop-opacity="0.04" />
+                                        </radialGradient>
+                                    </defs>
+                                </svg>
                                 <svg width="23" height="24" viewBox="0 0 23 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -144,7 +165,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="sidebar-option-dropdown">
+                        <div class="sidebar-option-dropdown sidebar-option-dropdown-active">
                             <a href="./approvehours.html">
                                 Approve Hours
                             </a>
@@ -154,7 +175,7 @@
                             <a href="#">
                                 Register Absence
                             </a>
-                            <a href="./hourDetails.html">
+                            <a href="./hourDetails.html" class="sidebar-option-dropdown-active-page">
                                 My Hours
                             </a>
                             <a href="#">
@@ -203,61 +224,41 @@
                             </a>
                         </div>
                     </li>
-                    <li class="sidebar-active-page">
+                    <li>
                         <div class="sidebar-option-main">
                             <div>
-                                <svg class="sidebar-option-back-shadow" width="69" height="80" viewBox="0 0 69 80"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g opacity="0.3" filter="url(#filter0_f_10_2304)">
-                                        <circle cx="23" cy="34" r="30" fill="url(#paint0_radial_10_2304)" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_f_10_2304" x="-23" y="-12" width="92" height="92"
-                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                                result="shape" />
-                                            <feGaussianBlur stdDeviation="8" result="effect1_foregroundBlur_10_2304" />
-                                        </filter>
-                                        <radialGradient id="paint0_radial_10_2304" cx="0" cy="0" r="1"
-                                            gradientUnits="userSpaceOnUse"
-                                            gradientTransform="translate(23 34) rotate(90) scale(30)">
-                                            <stop stop-color="#E0FDFF" />
-                                            <stop offset="1" stop-color="white" stop-opacity="0.04" />
-                                        </radialGradient>
-                                    </defs>
-                                </svg>
-                                <svg width="22" height="24" viewBox="0 0 22 24" fill="none"
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M17.5084 14.7092V10.3039C17.5084 10.1088 17.3584 10.0038 17.2083 10.1088L12.7054 12.7054C12.6079 12.758 12.5103 12.9081 12.5103 13.0582V18.259C12.5103 18.4615 12.6604 18.5591 12.8105 18.4615L16.6079 16.2627L20.3152 18.4091L10.6567 23.985L10.6341 24L10.6041 23.985L4.06754 20.2026L0.968105 18.4015L4.65296 16.2626L8.45779 18.4615C8.60783 18.5591 8.75793 18.4091 8.70539 18.2139V13.0056C8.70539 12.8555 8.65291 12.758 8.50281 12.6604L4 10.0563C3.90244 10.0038 3.69981 10.1088 3.69981 10.2589V14.6567L0 16.8105V5.606L9.7561 0V4.30019L5.95122 6.50657C5.80113 6.55159 5.80113 6.80675 5.95122 6.85178L10.454 9.45591C10.5591 9.50844 10.7092 9.55347 10.8593 9.45591L15.3621 6.85178C15.5122 6.80675 15.5122 6.60413 15.3621 6.50657L11.5572 4.30019V0L21.2158 5.606V16.788L17.5084 14.7092Z"
-                                        fill="#D6D7D9" />
+                                        fill="#8F9095" />
                                 </svg>
-
-                                <p> Companies/Users</p>
+                                <p>
+                                    Companies/Users
+                                </p>
                             </div>
                             <svg class="sidebar-caret-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0_4_1518" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                <mask id="mask0_10_2263" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                     width="24" height="24">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M17.5856 14.4685C17.3269 14.7919 16.8549 14.8444 16.5315 14.5856L12 10.9604L7.46849 14.5856C7.14505 14.8444 6.67308 14.7919 6.41432 14.4685C6.15556 14.145 6.208 13.6731 6.53145 13.4143L11.5315 9.41432C11.8054 9.19519 12.1946 9.19519 12.4685 9.41432L17.4685 13.4143C17.7919 13.6731 17.8444 14.145 17.5856 14.4685Z"
+                                        d="M6.41438 9.53151C6.67313 9.20806 7.1451 9.15562 7.46855 9.41438L12 13.0396L16.5315 9.41438C16.855 9.15562 17.3269 9.20806 17.5857 9.53151C17.8444 9.85495 17.792 10.3269 17.4685 10.5857L12.4685 14.5857C12.1946 14.8048 11.8054 14.8048 11.5315 14.5857L6.53151 10.5857C6.20806 10.3269 6.15562 9.85495 6.41438 9.53151Z"
                                         fill="#28303F" />
                                 </mask>
-                                <g mask="url(#mask0_4_1518)">
-                                    <rect x="24" y="24" width="24" height="24" transform="rotate(180 24 24)"
-                                        fill="#D6D7D9" />
+                                <g mask="url(#mask0_10_2263)">
+                                    <rect width="24" height="24" fill="#8F9095" />
                                 </g>
                             </svg>
+
                         </div>
-                        <div class="sidebar-option-dropdown sidebar-option-dropdown-active">
+                        <div class="sidebar-option-dropdown">
                             <a href="./companies.html">
                                 Comapnies
                             </a>
                             <a href="./users.html">
                                 Users
                             </a>
-                            <a href="./addCompany.html" class="sidebar-option-dropdown-active-page">
+                            <a href="./addCompany.html">
                                 New Company/Costumer
                             </a>
                             <a href="./addUsers.html">
@@ -317,130 +318,143 @@
                 </div>
             </header>
             <div class="page-name-heading wrap">
-                <p>Add Company</p>
+                <p>Hour Details</p>
             </div>
             <div class="right-side-content-inner padding-zero">
                 <div class="addProject-individual-section">
-                    <div class="add-task-inner-heading">
-                        <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.5084 14.7092V10.3039C17.5084 10.1088 17.3584 10.0038 17.2083 10.1088L12.7054 12.7054C12.6079 12.758 12.5103 12.9081 12.5103 13.0582V18.259C12.5103 18.4615 12.6604 18.5591 12.8105 18.4615L16.6079 16.2627L20.3152 18.4091L10.6567 23.985L10.6341 24L10.6041 23.985L4.06754 20.2026L0.968105 18.4015L4.65296 16.2626L8.45779 18.4615C8.60783 18.5591 8.75793 18.4091 8.70539 18.2139V13.0056C8.70539 12.8555 8.65291 12.758 8.50281 12.6604L4 10.0563C3.90244 10.0038 3.69981 10.1088 3.69981 10.2589V14.6567L0 16.8105V5.606L9.7561 0V4.30019L5.95122 6.50657C5.80113 6.55159 5.80113 6.80675 5.95122 6.85178L10.454 9.45591C10.5591 9.50844 10.7092 9.55347 10.8593 9.45591L15.3621 6.85178C15.5122 6.80675 15.5122 6.60413 15.3621 6.50657L11.5572 4.30019V0L21.2158 5.606V16.788L17.5084 14.7092Z"
-                                fill="#181F26" />
-                        </svg>
-
-                        COMPANY DETAILS
-                    </div>
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
-                            <p>Company Name <span class="required-star">*</span></p>
-                            <input type="text" name="" id="" placeholder="Maadi Tech & Co. Private, Ltd.">
+                            <p>Date <span class="required-star">*</span></p>
+                            <input type="date" placeholder="">
                         </div>
                         <div class="add-task-input-box">
-                            <p>Organization No. <span class="required-star">*</span></p>
-                            <input type="text" name="" id="" placeholder="Organization Number">
+                            <p>Employee Name <span class="required-star">*</span></p>
+                            <input type="text" placeholder="Mate Adam">
                         </div>
                     </div>
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
-                            <p>Company Phone No. <span class="required-star">*</span></p>
-                            <input type="text" name="" id="" placeholder="+1(123) 0000-0000">
+                            <p>Project <span class="required-star">*</span></p>
+                            <input type="text" placeholder="934 Feltberederasen">
                         </div>
                         <div class="add-task-input-box">
-                            <p>Company Email <span class="required-star">*</span> </p>
-                            <input type="email" name="" id="" placeholder="john.doe@email.com">
+                            <p>Activity <span class="required-star">*</span></p>
+                            <input type="text" placeholder="Carpenting">
                         </div>
                     </div>
                     <div class="add-task-input-box-double">
                         <div class="add-task-input-box">
-                            <p>Company Invoice Address <span class="required-star">*</span></p>
-                            <input type="text" name="" id="" placeholder="Company Invoice Address">
+                            <p>From <span class="required-star">*</span></p>
+                            <input type="text" placeholder="7:00">
                         </div>
                         <div class="add-task-input-box">
-                            <p>Company Address <span class="required-star">*</span></p>
-                            <input type="text" placeholder="Unit 6 Centrepoint , Liosban Industrial Estate">
+                            <p>To <span class="required-star">*</span></p>
+                            <input type="text" placeholder="15:00">
+                        </div>
+                    </div>
+                    <div class="add-task-input-box-double">
+                        <div class="add-task-input-box">
+                            <p>Lunch <span class="required-star">*</span></p>
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="0:30">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>0:30</li>
+                                    <li>0:40</li>
+                                    <li>0:50</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-task-input-box">
+                            <p>Hours <span class="required-star">*</span></p>
+                            <div class="input-relative">
+                                <input type="text" placeholder="15:00">
+                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23 12C23 18.3512 17.8512 23.5 11.5 23.5C5.14872 23.5 0 18.3512 0 12C0 5.64872 5.14872 0.5 11.5 0.5C17.8512 0.5 23 5.64872 23 12Z"
+                                        fill="#181F26" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.5002 6.5375C11.9765 6.5375 12.3627 6.92366 12.3627 7.4V11.6427L14.985 14.2652C15.3219 14.602 15.3219 15.148 14.985 15.4848C14.6482 15.8217 14.1022 15.8217 13.7654 15.4848L10.8904 12.6098C10.7285 12.4482 10.6377 12.2287 10.6377 12V7.4C10.6377 6.92366 11.0239 6.5375 11.5002 6.5375Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-task-input-box-double">
+                        <div class="add-task-input-box">
+                            <p>Salary Type <span class="required-star">*</span></p>
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="Fixed Salary">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>Fixed Salary</li>
+                                    <li>Hourly Based Salary</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-task-input-box">
+                            <p>Machine <span class="required-star">*</span></p>
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="Carpenter">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>Carpenter</li>
+                                    <li>Carpenter</li>
+                                    <li>Carpenter</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-task-input-box-double">
+                        <div class="add-task-input-box">
+                            <p>Machine (h) <span class="required-star">*</span></p>
+                            <div class="select-value-custom-box">
+                                <input type="text" readonly placeholder="7:30">
+                                <img src="./images/select-arrow-down-black.svg" alt="">
+                                <div>
+                                    <li>7:30</li>
+                                    <li>8:30</li>
+                                    <li>9:30</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-task-input-box">
+                            <p>Other Costs</p>
+                            <input type="text" name="" id="" placeholder="Other Costs">
+                        </div>
+                    </div>
+                    <div class="add-task-input-box-double add-task-input-box-triple">
+                        <div class="add-task-input-box">
+                            <p>Comment <span class="required-star">*</span></p>
+                            <textarea name="" id="" cols="30" rows="5"
+                                placeholder="Write your comment here ..."></textarea>
+                        </div>
+                        <div class="add-task-input-box-triple-double">
+                            <div class="add-task-input-box">
+                                <p>Costumer <span class="required-star">*</span></p>
+                                <input type="text" name="" id="" placeholder="Kongsberg u">
+                            </div>
+                            <div class="add-task-input-box">
+                                <p>Billable Costs <span class="required-star">*</span></p>
+                                <input type="text" name="" id="" placeholder="$ 4,875.00">
+                            </div>
                         </div>
                     </div>
                     <div class="add-task-input-box-half">
                         <div class="add-task-input-box">
-                            <p>Type <span class="required-star">*</span></p>
-                            <!-- <select name="" id="">
-                                <option value="">Builder</option>
-                                <option value="">Sub Contractor</option>
-                                <option value="">Supplier</option>
-                                <option value="">Dealer</option>
-                            </select> -->
+                            <p>Select Status <span class="required-star">*</span></p>
                             <div class="select-value-custom-box">
-                                <input type="text" readonly placeholder="Builder">
+                                <input type="text" readonly placeholder="Approve">
                                 <img src="./images/select-arrow-down-black.svg" alt="">
                                 <div>
-                                    <li>Builder</li>
-                                    <li>Sub Contractor</li>
-                                    <li>Supplier</li>
-                                    <li>Dealer</li>
+                                    <li>Approve</li>
+                                    <li>Decline</li>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="addProject-individual-section">
-                    <div class="add-task-inner-heading">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_533_9852)">
-                                <path
-                                    d="M8.82319 9.40031C11.2453 9.40031 13.2089 7.29598 13.2089 4.70015C13.2089 2.10433 11.2453 0 8.82319 0C6.40104 0 4.4375 2.10433 4.4375 4.70015C4.4375 7.29598 6.40104 9.40031 8.82319 9.40031Z"
-                                    fill="black" />
-                                <path
-                                    d="M16.1216 13.3561C15.1538 11.9554 13.6045 11.0491 11.9078 10.9193L9.54862 13.8857C9.20005 14.3474 8.44646 14.3473 8.09795 13.8857L5.72636 10.9038C2.81052 11.1296 0.504771 13.6122 0.503284 16.6313L0.500977 20.7931H2.61123V18.495H4.46482V20.7931H12.4488C12.3375 20.3124 12.2815 19.8185 12.2815 19.3149C12.2814 16.7033 13.8125 14.3963 16.1216 13.3561ZM18.8169 14.63C16.2353 14.63 14.135 16.7316 14.135 19.3149C14.135 21.8982 16.2353 23.9999 18.8169 23.9999C21.3986 23.9999 23.4989 21.8982 23.4989 19.3149C23.4988 16.7316 21.3985 14.63 18.8169 14.63ZM19.6796 22.6249H17.9817V18.7096H19.6796V22.6249ZM18.8169 18.1363C18.2276 18.1363 17.75 17.6592 17.75 17.0706C17.75 16.4821 18.2276 16.0049 18.8169 16.0049C19.4062 16.0049 19.8839 16.4821 19.8839 17.0706C19.8839 17.6592 19.4062 18.1363 18.8169 18.1363Z"
-                                    fill="black" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_533_9852">
-                                    <rect width="24" height="24" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-
-                        CUSTOMER DEATILS
-                    </div>
-                    <div class="add-task-input-box-double">
-                        <div class="add-task-input-box">
-                            <p>Customer Name <span class="required-star">*</span></p>
-                            <!-- <select name="" id="">
-                                <option value="">Adam Smith</option>
-                                <option value="">John</option>
-                                <option value="">Doe</option>
-                                <option value="">Adam</option>
-                            </select> -->
-                            <div class="select-value-custom-box">
-                                <input type="text" readonly placeholder="Adam Smith">
-                                <img src="./images/select-arrow-down-black.svg" alt="">
-                                <div>
-                                    <li>John Dow</li>
-                                    <li>Alex Kaur</li>
-                                    <li>Alexander</li>
-                                    <li>Peston</li>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="add-task-input-box">
-                            <p>Customer Address <span class="required-star">*</span></p>
-
-                            <input type="text" name="" id=""
-                                placeholder="Unit 6 Centrepoint , Liosban Industrial Estate">
-                        </div>
-                    </div>
-                    <div class="add-task-input-box-double">
-                        <div class="add-task-input-box">
-                            <p>Customer Phone No. <span class="required-star">*</span></p>
-                            <input type="text" name="" id="" placeholder="+1(123) 0000-0000">
-                        </div>
-                        <div class="add-task-input-box">
-                            <p>Customer Email <span class="required-star">*</span></p>
-                            <input type="text" name="" id="" placeholder="john.doe@email.com">
-                        </div>
-                    </div>
-                </div>
-
                 <div class="add-task-bottom-btns add-Project-bottom-btns">
                     <button class="page-name-heading-transparent-box page-end-back-btn">
                         Back
@@ -452,7 +466,6 @@
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 

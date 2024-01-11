@@ -916,6 +916,17 @@ table tr td {
     outline: none;
 }
 
+.input-relative {
+    position: relative;
+}
+
+.input-relative svg {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+}
+
 .add-task-input-box-double {
     display: flex;
     gap: 18px;
@@ -923,6 +934,14 @@ table tr td {
 
 .add-task-input-box-half {
     width: 49.5%;
+}
+
+.add-task-input-box-triple textarea {
+    height: 87%;
+}
+
+.add-task-input-box-triple-double {
+    width: 100%;
 }
 
 .add-task-input-check-row {
