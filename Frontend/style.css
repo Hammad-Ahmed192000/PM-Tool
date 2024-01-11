@@ -1519,10 +1519,11 @@ input[type="checkbox"]:checked {
 
 .right-side-content-inner-filter-dropdown-inner-inner p {
     color: #181F26;
+    width: 100%;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-    text-align: left;
+    text-align: center;
     padding: 10px 18px;
     border-bottom: 1px solid rgba(16, 36, 55, 0.24);
     /* border: 1px solid #F1595C;
@@ -1534,6 +1535,12 @@ input[type="checkbox"]:checked {
     outline: none;
     cursor: pointer; */
 }
+
+.right-side-content-inner-filter-dropdown-inner-inner p:hover,
+.right-side-content-inner-filter-dropdown-inner-inner p:focus {
+    background-color: #F6F6F9;
+}
+
 
 .right-side-content-inner-filter-dropdown-inner-inner div {
     display: flex;
@@ -2233,13 +2240,6 @@ select {
     /* z-index: -100 !important; */
 }
 
-/* .fc-time-grid,
-.fc-event,
-.fc-time-grid,
-.fc-bgevent {
-    z-index: -10 !important;
-} */
-
 .fc-event-main {
     position: relative;
 }
@@ -2397,6 +2397,28 @@ select {
     color: #181F26;
 }
 
+
+/* Approve Hours Page  */
+
+.table-checkbox-box p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-checkbox-box p input {
+    width: 27px;
+    height: 27px;
+    /* outline: 1px solid #D8D8D8; */
+
+}
+
+.table-checkbox-box p input:checked {
+    outline: 1px solid #D8D8D8;
+}
+
+
+
 /* PlaceHolder Color  */
 ::placeholder {
     color: #BABABAed;
@@ -2488,6 +2510,17 @@ select {
 
 }
 
+@media(max-width:1229px) {
+
+    .right-side-content-inner-filter-row-pc {
+        display: none;
+    }
+
+    .right-side-content-inner-filter-row-mobile {
+        display: flex;
+    }
+}
+
 
 @media(max-width:1220px) {
     .project-list-card-full {
@@ -2540,13 +2573,15 @@ select {
         padding-left: 0;
     }
 
-    .right-side-content-inner-filter-row-pc {
-        display: none;
+    /* .right-side-content-inner-filter-hamburg {
+        position: static;
     }
 
-    .right-side-content-inner-filter-row-mobile {
-        display: flex;
-    }
+    .right-side-content-inner-filter-hamburg-inner {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    } */
 
     /* Header  */
     header {
