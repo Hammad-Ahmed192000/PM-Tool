@@ -222,6 +222,15 @@ body {
     padding: 16px 36px;
 }
 
+.padding-zero {
+    padding: 0 !important;
+}
+
+.padding-vertical-zero {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 header {
     width: 100%;
     background-color: #fff;
@@ -424,6 +433,22 @@ header {
     background-color: #181F26;
     border: 2px solid #181F26;
     color: #fff;
+}
+
+.page-name-heading-blue-box {
+    background-color: #085DB7;
+    border: 2px solid #085DB7;
+    color: #fff;
+}
+
+.page-name-heading-blue-box-hov:hover {
+    background-color: #085DB7;
+    border: 2px solid #085DB7;
+    color: #fff;
+}
+
+.page-name-heading-blue-box-hov:hover svg path {
+    fill: #fff;
 }
 
 .right-side-content-inner {
@@ -2487,7 +2512,61 @@ select {
     outline: 1px solid #D8D8D8;
 }
 
+/* Project two Page  */
+.project-two-right-side-content-outer-right {
+    width: 80%;
+}
 
+.folder-with-detail-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.folder-with-detail-list .folder-with-detail-list-outer {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    user-select: none;
+}
+
+.folder-detail-list-view-button {
+    position: relative;
+    user-select: none;
+}
+
+.folder-detail-list-view-inner {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 180px;
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #B1D4FA;
+    border-radius: 3px 3px 0px 0px;
+    filter: drop-shadow(0px 2px 24px rgba(24, 31, 38, 0.12));
+    z-index: 15;
+    display: none;
+    user-select: none;
+
+}
+
+.folder-detail-list-view-inner p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px 14px 15px;
+}
+
+.folder-detail-list-view-inner p:hover {
+    background-color: #CEE6FF;
+}
 
 /* PlaceHolder Color  */
 ::placeholder {

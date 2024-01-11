@@ -54,7 +54,7 @@ if (document.querySelector(".header-user-box")) {
   });
 }
 
-// Deleet Modal
+// Delete Modal
 if (document.querySelector(".delete-modal")) {
   document.querySelectorAll(".delete-icon").forEach((e) => {
     e.addEventListener("click", () => {
@@ -145,6 +145,25 @@ if (document.querySelector(".new-folder-modal")) {
       document.querySelector(".new-folder-modal").style.display = "none";
       document.querySelector(".back-transparent-layer").style.display = "none";
     }
+  });
+}
+
+// Folder Details three dots Popup
+if (document.querySelector(".folder-with-detail-list-container")) {
+  document.querySelectorAll(".folder-detail-list-view-button").forEach((e) => {
+    e.addEventListener("click", () => {
+      e.querySelector(".folder-detail-list-view-inner").style.display = "flex";
+    });
+  });
+  window.addEventListener("click", (e) => {
+    document
+      .querySelectorAll(".folder-detail-list-view-button")
+      .forEach((event) => {
+        if (e.target.parentElement != event.querySelector("svg")) {
+          event.querySelector(".folder-detail-list-view-inner").style.display =
+            "none";
+        }
+      });
   });
 }
 
